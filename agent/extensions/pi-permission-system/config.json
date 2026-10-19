@@ -1,0 +1,41 @@
+{
+
+    "debugLog": false,
+    "permissionReviewLog": true,
+    "yoloMode": false,
+    "shellTools": {
+    },
+    "commandEffects": {
+        "git": {
+            "subcommands": {
+                "log": "read",
+                "status": "read"
+            }
+        }
+    },
+    "permission": {
+        "*": "ask",
+        "path": {
+            "*": "ask",
+            "*.env": "deny",
+            "*.env.*": "deny",
+            "*.env.example": "allow"
+        },
+        "read": "ask",
+        "write": "deny",
+        "edit": "deny",
+        "bash": {
+            "*": "ask",
+            "rm -rf *": "deny",
+            "rm *": "deny",
+            "sudo *": "deny"
+        },
+        "mcp": {
+            "mcp_status": "allow"
+        },
+        "skill": {
+            "*": "ask"
+        },
+        "external_directory": "ask"
+    }
+}
